@@ -5,34 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>えらいよぼく</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>えらいよぼく</h1>
-        <p>今日した「えらいこと」を記録して、自己肯定感を爆上げしよう！</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>えらいよぼく</h1>
+            <p>今日した「えらいこと」を記録して、自己肯定感を爆上げしよう！</p>
+        </header>
 
-    <main>
-        <section class="input-section">
-            <input type="text" id="greatDeedInput" placeholder="今日したえらいことを入力...">
-            <button id="addDeedBtn">✨ えらい追加</button>
-        </section>
+        <main>
+            <div class="input-area">
+                <input type="text" id="greatDeedInput" placeholder="例：朝早く起きて散歩した">
+                <button id="addDeedBtn">✨ 追加</button>
+            </div>
 
-        <section class="deeds-section">
-            <h2>えらいことリスト</h2>
-            <ul id="deedList"></ul>
-        </section>
+            <div class="list-area">
+                <h2>えらいことリスト</h2>
+                <ul id="deedList"></ul>
+            </div>
 
-        <section class="action-buttons">
-            <button id="saveDeedsBtn">💾 えらい保存</button>
-            <button id="loadDeedsBtn">📂 えらい読み込み</button>
-            <button id="clearDeedsBtn">🗑️ リストを空にする</button>
-        </section>
-    </main>
+            <div class="actions">
+                <button id="saveDeedsBtn">💾 保存</button>
+                <button id="loadDeedsBtn">📂 読み込み</button>
+                <button id="clearDeedsBtn">🗑️ リストをクリア</button>
+            </div>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 えらいよぼく. All rights reserved.</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 えらいよぼく. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
