@@ -1,179 +1,177 @@
+:root {
+    --primary-color: #4285F4; /* Google Blue */
+    --secondary-color: #FBBC05; /* Google Yellow */
+    --background-color: #FFFFFF;
+    --text-color: #3C4043;
+    --light-gray: #E8EAED;
+    --border-radius: 8px;
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
 }
 
-main {
-    background-color: #fff;
+.container {
+    background-color: var(--background-color);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    text-align: center;
-    border: 3px solid #6dd5ed; /* Light blue border */
+    width: 100%;
 }
 
 header {
-    margin-bottom: 20px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 header h1 {
-    font-size: 2.5em;
-    color: #007bff;
+    font-size: 2.2em;
+    font-weight: 700;
     margin: 0;
+    color: var(--primary-color);
 }
 
 header p {
-    color: #555;
-    font-size: 1.1em;
+    font-size: 1em;
+    color: #5F6368;
+    margin-top: 5px;
 }
 
-.input-section {
+.input-area {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 #greatDeedInput {
     flex-grow: 1;
     padding: 12px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--border-radius);
     font-size: 1em;
     transition: border-color 0.3s;
 }
 
 #greatDeedInput:focus {
     outline: none;
-    border-color: #007bff;
+    border-color: var(--primary-color);
 }
 
 button {
     padding: 12px 20px;
     border: none;
-    border-radius: 8px;
-    color: #fff;
+    border-radius: var(--border-radius);
+    color: white;
+    font-weight: 500;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s, transform 0.2s;
-    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 #addDeedBtn {
-    background-color: #ff6b6b;
+    background-color: var(--primary-color);
 }
 
 #addDeedBtn:hover {
-    background-color: #ff4757;
-    transform: scale(1.05);
+    background-color: #3672d6;
 }
 
-.action-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-#saveDeedsBtn {
-    background-color: #28a745;
-}
-
-#saveDeedsBtn:hover {
-    background-color: #218838;
-}
-
-#loadDeedsBtn {
-    background-color: #ffc107;
-}
-
-#loadDeedsBtn:hover {
-    background-color: #e0a800;
-}
-
-#clearDeedsBtn {
-    background-color: #dc3545;
-}
-
-#clearDeedsBtn:hover {
-    background-color: #c82333;
-}
-
-.deeds-section {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.deeds-section h2 {
-    color: #007bff;
-    margin-top: 0;
+.list-area h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--text-color);
 }
 
 #deedList {
     list-style: none;
     padding: 0;
-    text-align: left;
 }
 
 #deedList li {
-    background-color: #e9ecef;
+    background-color: #F8F9FA;
     padding: 15px;
     margin-bottom: 10px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    animation: fadeIn 0.5s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 #deedList li span {
-    font-weight: bold;
-    color: #495057;
+    font-weight: 400;
+    color: var(--text-color);
 }
 
-#deedList li .delete-btn {
-    background-color: #dc3545;
-    color: white;
+.delete-btn {
+    background-color: transparent;
+    color: #9AA0A6;
     border: none;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.8em;
+    font-size: 1.2em;
     cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 5px;
+    transition: color 0.3s;
 }
 
-#deedList li .delete-btn:hover {
-    background-color: #c82333;
+.delete-btn:hover {
+    color: #EA4335;
 }
 
-footer {
-    margin-top: 20px;
-    color: #999;
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.actions button {
+    background-color: var(--light-gray);
+    color: var(--text-color);
     font-size: 0.9em;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
+.actions button:hover {
+    background-color: #D2D5DA;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #9AA0A6;
+    font-size: 0.8em;
+}
+
+/* レスポンシブデザイン (スマートフォン対応) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .container {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .input-area {
+        flex-direction: column;
+    }
+
+    #addDeedBtn {
+        width: 100%;
     }
 }
